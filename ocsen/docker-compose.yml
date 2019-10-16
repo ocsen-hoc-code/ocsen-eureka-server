@@ -11,3 +11,19 @@ services:
       # - 8000:8000
     volumes:
       - .:/app
+    networks:
+      ocsen_microservice:
+        ipv4_address: 172.88.1.1
+
+
+# networks:
+#   default:
+#     external:
+#       name: ocsen-microservice
+
+networks:
+    ocsen_microservice:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.88.0.0/16
