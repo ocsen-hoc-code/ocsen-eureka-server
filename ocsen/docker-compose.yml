@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+
+  ocsen-eureka-server:
+    container_name: ocsen_eureka_server_container
+    image: ocsen-eureka-server:latest
+    ports:
+      - 8761:8761
+      # If you want use devtools
+      # - 8000:8000
+    volumes:
+      - .:/app
